@@ -1,0 +1,14 @@
+{
+  "name": "in-memory-db",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "author": "Alperen Çerezci",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
