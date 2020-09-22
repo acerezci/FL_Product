@@ -1,0 +1,33 @@
+@import "../variables/colors";
+@import "../variables/grid";
+@import "../common/grid";
+@import "../variables/misc";
+@import '../variables/fonts';
+
+.header {
+  @extend %flexSpaceBetweenAlignCentered;
+  color: $black;
+  border-bottom: 1px solid $lightBorderColor;
+}
+
+.siteLogo {
+  @extend %flexSpaceBetweenAlignCentered;
+}
+
+.logoImage {
+  height: 60px;
+  margin-right: $marginGutter / 2;
+}
+
+.basketImage{
+  cursor: pointer;
+  height: 35px;
+  margin-right: $marginGutter / 2;
+}
+
+.headerSection {
+  @extend %flexSpaceBetweenAlignCentered;
+  display: grid;
+  column-gap: $gridGap;
+  grid-template-columns: auto auto;
+}

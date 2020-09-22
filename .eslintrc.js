@@ -37,6 +37,7 @@ module.exports = {
     'react/destructuring-assignment': 0,
     'max-len': ['error', { code: 140 }],
     'no-param-reassign': ['error', { props: true, ignorePropertyModificationsForRegex: ['^state'] }],
+    "react/prop-types": 0,
     'import/extensions': [
       'error',
       'ignorePackages',
@@ -47,6 +48,7 @@ module.exports = {
         tsx: 'never',
       },
     ],
+    "react/jsx-props-no-spreading": "off",
   },
   settings: {
     'import/resolver': {

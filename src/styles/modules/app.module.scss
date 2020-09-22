@@ -1,0 +1,17 @@
+@import '../variables/grid';
+
+.appWrapper {
+  display: grid;
+  row-gap: $gridGap;
+  height: 100vh;
+  grid-template-rows: 80px 1fr 90px;
+}
+
+$userSection: 400px;
+
+.mainSection {
+  display: grid;
+  column-gap: $gridGap;
+  grid-template-rows: calc(100vh - 210px);
+  grid-template-columns: $userSection calc(100vw - #{$userSection + $gridGap + $paddingGutter * 2});
+}

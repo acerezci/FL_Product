@@ -1,0 +1,15 @@
+$generalGap: 20px;
+
+$gridGap: $generalGap;
+$smallGridGap: $generalGap / 2;
+
+$containerGutter: $generalGap;
+
+$paddingGutter: $generalGap;
+$smallPaddingGutter: $paddingGutter / 2;
+$minPaddingGutter: $smallPaddingGutter / 2;
+$middlePaddingGutter: $generalGap * 1.5;
+$bigPaddingGutter: $paddingGutter * 2;
+
+$marginGutter: $generalGap;
+$smallMarginGutter: $marginGutter / 2;

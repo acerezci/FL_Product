@@ -1,0 +1,30 @@
+@import "../variables/colors";
+@import "../variables/grid";
+@import "../variables/fonts";
+@import "../variables/misc";
+
+.filterMenuContainer {
+  border: 1px solid $midGray;
+  border-radius: 8px;
+}
+
+.filterMenuWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: $smallMarginGutter;
+  row-gap: $gridGap;
+}
+
+.filterItemWrapper {
+  display: grid;
+  row-gap: 5px;
+}
+
+.input {
+  width: 120px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid $lightBorderColor;
+  height: 30px;
+  padding: 0 5px;
+}

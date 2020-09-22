@@ -1,0 +1,18 @@
+.container {
+  padding-left: $paddingGutter;
+  padding-right: $paddingGutter;
+}
+
+%flex {
+  display: flex;
+}
+
+%flexSpaceBetween {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+%flexSpaceBetweenAlignCentered {
+  @extend %flexSpaceBetween;
+  align-items: center;
+}

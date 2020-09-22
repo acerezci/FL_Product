@@ -1,0 +1,25 @@
+@import "../variables/colors";
+@import "../variables/grid";
+@import "../variables/misc";
+@import '../variables/fonts';
+
+.inputContainer {
+  position: relative;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 5px;
+  top: 8px;
+}
+
+.input {
+  padding: 6px 5px 6px 27px;
+  border-radius: 6px;
+  outline: none;
+  font-size: $inputFontSize;
+  font-family: $fullFontFamily;
+  border: 1px solid $lightBorderColor;
+  width:300px;
+  height:35px;
+}
