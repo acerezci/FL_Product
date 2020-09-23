@@ -1,0 +1,42 @@
+[
+  {
+    "id": 0,
+    "name": "Luna Icon Amazon Kamuflaj Jean Pantolon",
+    "price": 100,
+    "color": "black",
+    "gender": "female",
+    "cloth": "linen",
+    "size":"l",
+    "cut":"slimfit"
+  },
+  {
+    "id": 1,
+    "name": "Joy Kemer Detaylı Mavi Jean Pantolon",
+    "price": 200,
+    "color": "red",
+    "gender": "female",
+    "cloth": "linen",
+    "size":"xl",
+    "cut":"slimfit"
+  },
+  {
+    "id": 2,
+    "name": "Mykonos Yırtıklı Gold Jean Pantolon",
+    "price": 75,
+    "color": "black",
+    "gender": "female",
+    "cloth": "cotton",
+    "size":"xxl",
+    "cut":"slimfit"
+  },
+  {
+    "id": 3,
+    "name": "ZİFTT Serisi James Jean Pantolon",
+    "price": 100,
+    "color": "gray",
+    "gender": "male",
+    "cloth": "cotton",
+    "size":"xxl",
+    "cut":"loose"
+  }
+]

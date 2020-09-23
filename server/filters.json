@@ -1,0 +1,55 @@
+{
+  "status": {
+    "gender": {
+      "label": "Cinsiyet",
+      "items": [
+        { "id": 0, "label": "Erkek", "value": "male" },
+        { "id": 1, "label": "Kadın", "value": "female" }
+      ]
+    },
+    "colors": {
+      "label": "Renkler",
+      "items": [
+        { "id": 0, "label": "Kırmızı", "value": "red" },
+        { "id": 1, "label": "Gri", "value": "gray" },
+        { "id": 2, "label": "Sarı", "value": "yellow" },
+        { "id": 3, "label": "Siyah", "value": "black" }
+      ]
+    },
+    "cloth": {
+      "label": "Kumaş Türü",
+      "items": [
+        { "id": 0, "label": "Deri", "value": "leather" },
+        { "id": 1, "label": "Pamuk", "value": "cotton" },
+        { "id": 2, "label": "Keten", "value": "linen" },
+        { "id": 3, "label": "Kadife", "value": "velvet" }
+      ]
+    },
+    "sizes": {
+      "label": "Beden",
+      "items": [
+        { "id": 0, "label": "S", "value": "s" },
+        { "id": 1, "label": "M", "value": "m" },
+        { "id": 2, "label": "L", "value": "l" },
+        { "id": 3, "label": "XL", "value": "xl" },
+        { "id": 4, "label": "XXL", "value": "xxl" }
+      ]
+    },
+    "cut": {
+      "label": "Kesim Türü",
+      "items": [
+        { "id": 0, "label": "Dar Kesim", "value": "slimfit" },
+        { "id": 1, "label": "Bol Kesim", "value": "loose" }
+      ]
+    }
+  },
+  "range": {
+    "price": {
+      "label": "Fiyat Aralığı",
+      "items": [
+        { "id": 0, "label": "En Düşük Fiyat", "value": "min" },
+        { "id": 1, "label": "En Yüksek Fiyat", "value": "max" }
+      ]
+    }
+  }
+}

@@ -38,6 +38,7 @@ module.exports = {
     'max-len': ['error', { code: 140 }],
     'no-param-reassign': ['error', { props: true, ignorePropertyModificationsForRegex: ['^state'] }],
     "react/prop-types": 0,
+    "no-param-reassign": 0,
     'import/extensions': [
       'error',
       'ignorePackages',

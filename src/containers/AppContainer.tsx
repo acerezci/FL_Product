@@ -9,9 +9,9 @@ import styles from '../styles/modules/app.module.scss';
 
 const AppContainer: React.FC = () => {
   useEffect(() => {
-    fetch('http://localhost:8080')
+    fetch('http://localhost:8080/alldata')
       .then((response) => response.json())
-      .then((response) => console.log(response));
+      .then((response) => /* console.log(response) */ {});
   }, []);
 
   const appClasses = cx(styles.appWrapper);

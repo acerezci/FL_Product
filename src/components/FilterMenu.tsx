@@ -1,58 +1,85 @@
 import cx from 'classnames';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from '../styles/modules/filtermenu.module.scss';
-import FilterItem from './FilterItem';
+import { FilterMenuResponseType } from '../types/responses';
+import FilterStatusItem from './FilterStatusItem';
+import FilterRangeItem from './FilterRangeItem';
 
-const filterObject = [
-  {
-    gender: [
-      { key: 'male', value: 'Erkek' },
-      { key: 'female', value: 'Kadın' },
-    ],
-    cut: [
-      { key: 'slim', value: 'Dar Kesim' },
-      { key: 'loose', value: 'Bol Kesim' },
-    ],
-    color: [
-      { key: 'red', value: 'Kırmızı' },
-      { key: 'blue', value: 'Mavi' },
-      { key: 'gray', value: 'Gri' },
-      { key: 'black', value: 'Siyah' },
-    ],
-    size: [
-      { key: 's', value: 'S' },
-      { key: 'm', value: 'M' },
-      { key: 'l', value: 'L' },
-      { key: 'xl', value: 'XL' },
-      { key: 'xxl', value: 'XXL' },
-    ],
-    cloth: [
-      { key: 'cotton', value: 'Pamuk' },
-      { key: 'linen', value: 'Keten' },
-      { key: 'leather', value: 'Deri' },
-    ],
-    price: [
-      { key: 'low', value: 'En Düşük Fiyat' },
-      { key: 'high', value: 'En Yüksek Fiyat' },
-    ],
-  },
-];
+const onSubmit = (filtersArray: any) => {
+  fetch('http://localhost:8080/filterdata', {
+    method: 'POST',
+    headers: {
+      Accept: 'application/json',
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify(filtersArray),
+  })
+    .then((response) => response.json())
+    .then((response) => console.log(response));
+};
 
 const FilterMenu: React.FC = () => {
   const filterWrapper = cx('container', styles.filterMenuWrapper);
+  const [filterMenu, setFilterMenu] = useState<FilterMenuResponseType>();
+  const filtersArray = {
+    cloth: [],
+    colors: [],
+    cut: [],
+    sizes: [],
+    gender: [],
+    price: { min: '', max: '' },
+  };
+
+  useEffect(() => {
+    fetch('http://localhost:8080/allfilters')
+      .then((response) => response.json())
+      .then((response) => setFilterMenu(response.filters));
+  }, []);
 
   return (
     <div className={styles.filterMenuContainer}>
-      {filterObject.map((object, index) => (
-        <div className={filterWrapper} key={index.toString()}>
-          <FilterItem title="Cinsiyet" item={object.gender} />
-          <FilterItem title="Kesim" item={object.cut} />
-          <FilterItem title="Renk" item={object.color} />
-          <FilterItem title="Beden" item={object.size} />
-          <FilterItem title="Kumaş" item={object.cloth} />
-          <FilterItem title="Fiyat" inputType="number" item={object.price} />
-        </div>
-      ))}
+      <div className={filterWrapper}>
+        {filterMenu?.status.cloth && (
+          <FilterStatusItem
+            filtersArray={filtersArray.cloth}
+            items={filterMenu.status.cloth}
+          />
+        )}
+        {filterMenu?.status.colors && (
+          <FilterStatusItem
+            filtersArray={filtersArray.colors}
+            items={filterMenu.status.colors}
+          />
+        )}
+        {filterMenu?.status.gender && (
+          <FilterStatusItem
+            filtersArray={filtersArray.gender}
+            items={filterMenu.status.gender}
+          />
+        )}
+        {filterMenu?.status.cut && (
+          <FilterStatusItem
+            filtersArray={filtersArray.cut}
+            items={filterMenu.status.cut}
+          />
+        )}
+        {filterMenu?.status.sizes && (
+          <FilterStatusItem
+            filtersArray={filtersArray.sizes}
+            items={filterMenu.status.sizes}
+          />
+        )}
+        {filterMenu?.range.price && (
+          <FilterRangeItem
+            items={filterMenu.range.price}
+            filtersArray={filtersArray.price}
+          />
+        )}
+      </div>
+
+      <button type="button" onClick={() => onSubmit(filtersArray)}>
+        Ara
+      </button>
     </div>
   );
 };
