@@ -1,29 +1,39 @@
-type ItemDataType = {
+type FilterItemDataType = {
   id: number;
   label: string;
   value: string;
 };
 
-export type ItemType = {
+export type FilterItemType = {
   label: string;
-  items: Array<ItemDataType>;
+  items: Array<FilterItemDataType>;
 };
 
-export type FilterMenuStatusItemType = {
-  cloth: ItemType;
-  colors: ItemType;
-  cut: ItemType;
-  gender: ItemType;
-  sizes: ItemType;
-};
-
-type FilterMenuRangeItemType = {
-  price: ItemType;
+export type FilterMenuItemType = {
+  [key: string]: FilterItemType;
 };
 
 export interface FilterMenuResponseType {
-  range: FilterMenuRangeItemType;
-  status: FilterMenuStatusItemType;
+  range: FilterMenuItemType;
+  status: FilterMenuItemType;
 }
 
-export interface ProductsResponse {}
+export type ProductResponseType = Array<{
+  id: number;
+  name: string;
+  image: string;
+  properties: {
+    cloth: string;
+    clothLabel: string;
+    color: string;
+    colorLabel: string;
+    cut: string;
+    cutLabel: string;
+    gender: string;
+    genderLabel: string;
+    size: string;
+    sizeLabel: string;
+    price: number;
+    year: number;
+  };
+}>

@@ -5,7 +5,15 @@
 
 .filterItemWrapper {
   display: grid;
-  row-gap: 5px;
+  border-bottom:1px solid $midGray;
+}
+
+.filterItemWrapper:last-child{
+  border-bottom:none;
+}
+
+.filterItemWrapper:nth-last-child(2){
+  border-bottom:none;
 }
 
 .input {

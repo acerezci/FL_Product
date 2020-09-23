@@ -1,14 +1,14 @@
 import cx from 'classnames';
 import React from 'react';
 import styles from '../styles/modules/filteritem.module.scss';
-import { ItemType } from '../types/responses';
+import { FilterItemType } from '../types/responses';
 
 interface Props {
-  items: ItemType;
-  filtersArray: string[];
+  items: FilterItemType;
+  filterArray: string[];
 }
 
-const FilterStatusItem: React.FC<Props> = ({ items, filtersArray }) => {
+const FilterStatusItem: React.FC<Props> = ({ items, filterArray }) => {
   const filterItemWrapper = cx(styles.filterItemWrapper);
 
   return (
@@ -20,11 +20,11 @@ const FilterStatusItem: React.FC<Props> = ({ items, filtersArray }) => {
             type="checkbox"
             value={item.value}
             onChange={(e) => {
-              if (e.currentTarget.checked) filtersArray.push(item.value);
+              if (e.currentTarget.checked) filterArray.push(item.value);
               else {
-                const index = filtersArray.indexOf(item.value);
+                const index = filterArray.indexOf(item.value);
                 if (index !== -1) {
-                  filtersArray.splice(index, 1);
+                  filterArray.splice(index, 1);
                 }
               }
             }}

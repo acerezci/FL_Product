@@ -1,0 +1,59 @@
+@import "../variables/colors";
+@import "../variables/grid";
+
+.productsWrapper {
+  position: relative;
+  display: grid;
+  row-gap: $gridGap;
+  column-gap: $gridGap;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
+  @media screen and (max-width: 1650px) {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+  @media screen and (max-width: 920px) {
+    grid-template-columns: auto ;
+    grid-template-rows: auto ;
+  }
+}
+
+.loader {
+  position: absolute;
+  left:50%;
+  top:25%
+}
+
+.error {
+  color: $red;
+  align-self: center;
+  justify-self: center;
+}
+
+.image{
+  width:400px;
+}
+
+.product {
+  display: grid;
+  place-items: center;
+  border: 1px solid $midGray;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.title{
+  font-size: 19px;
+  margin: 8px 0;
+}
+
+.propertyItem{
+  font-size: 17px;
+}
+
+.propertyWrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: $gridGap;
+  row-gap: $smallGridGap;
+}

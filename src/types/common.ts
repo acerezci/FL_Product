@@ -1,3 +1,8 @@
-export interface filtersArrayType {}
-
-export type itemType = 'cloth' | 'cut' | 'colors' | 'gender' | 'sizes';
+export type FilterObjectType = {
+  range: {
+    [key: string]: [];
+  };
+  status: {
+    [key: string]: [];
+  };
+};

@@ -1,14 +1,14 @@
 import cx from 'classnames';
 import React from 'react';
 import styles from '../styles/modules/filteritem.module.scss';
-import { ItemType } from '../types/responses';
+import { FilterItemType } from '../types/responses';
 
 interface Props {
-  items: ItemType;
-  filtersArray: { min: string; max: string };
+  items: FilterItemType;
+  filterArray: string[];
 }
 
-const FilterRangeItem: React.FC<Props> = ({ items, filtersArray }) => {
+const FilterRangeItem: React.FC<Props> = ({ items, filterArray }) => {
   const filterItemWrapper = cx(styles.filterItemWrapper);
 
   return (
@@ -22,9 +22,8 @@ const FilterRangeItem: React.FC<Props> = ({ items, filtersArray }) => {
             placeholder={label}
             onChange={(e) => {
               const targetValue = e.currentTarget.value;
-
-              if (value === 'min') filtersArray.min = targetValue;
-              else filtersArray.max = targetValue;
+              if (value === 'min') filterArray[0] = targetValue;
+              else filterArray[1] = targetValue;
             }}
           />
         </div>

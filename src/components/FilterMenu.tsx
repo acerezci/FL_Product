@@ -1,18 +1,19 @@
 import cx from 'classnames';
 import React, { useEffect, useState } from 'react';
 import styles from '../styles/modules/filtermenu.module.scss';
-import { FilterMenuResponseType } from '../types/responses';
+import { FilterMenuResponseType, FilterMenuItemType } from '../types/responses';
+import { FilterObjectType } from '../types/common';
 import FilterStatusItem from './FilterStatusItem';
 import FilterRangeItem from './FilterRangeItem';
 
-const onSubmit = (filtersArray: any) => {
+const onSubmit = (filtersObject: any) => {
   fetch('http://localhost:8080/filterdata', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify(filtersArray),
+    body: JSON.stringify(filtersObject),
   })
     .then((response) => response.json())
     .then((response) => console.log(response));
@@ -21,13 +22,9 @@ const onSubmit = (filtersArray: any) => {
 const FilterMenu: React.FC = () => {
   const filterWrapper = cx('container', styles.filterMenuWrapper);
   const [filterMenu, setFilterMenu] = useState<FilterMenuResponseType>();
-  const filtersArray = {
-    cloth: [],
-    colors: [],
-    cut: [],
-    sizes: [],
-    gender: [],
-    price: { min: '', max: '' },
+  const filtersObject: FilterObjectType = {
+    range: {},
+    status: {},
   };
 
   useEffect(() => {
@@ -37,50 +34,40 @@ const FilterMenu: React.FC = () => {
   }, []);
 
   return (
-    <div className={styles.filterMenuContainer}>
-      <div className={filterWrapper}>
-        {filterMenu?.status.cloth && (
-          <FilterStatusItem
-            filtersArray={filtersArray.cloth}
-            items={filterMenu.status.cloth}
-          />
-        )}
-        {filterMenu?.status.colors && (
-          <FilterStatusItem
-            filtersArray={filtersArray.colors}
-            items={filterMenu.status.colors}
-          />
-        )}
-        {filterMenu?.status.gender && (
-          <FilterStatusItem
-            filtersArray={filtersArray.gender}
-            items={filterMenu.status.gender}
-          />
-        )}
-        {filterMenu?.status.cut && (
-          <FilterStatusItem
-            filtersArray={filtersArray.cut}
-            items={filterMenu.status.cut}
-          />
-        )}
-        {filterMenu?.status.sizes && (
-          <FilterStatusItem
-            filtersArray={filtersArray.sizes}
-            items={filterMenu.status.sizes}
-          />
-        )}
-        {filterMenu?.range.price && (
-          <FilterRangeItem
-            items={filterMenu.range.price}
-            filtersArray={filtersArray.price}
-          />
-        )}
-      </div>
+    <div className={filterWrapper}>
+      {filterMenu
+          && Object.keys(filterMenu).map((filterMenuKey) => {
+            const filterSubMenu = filterMenu[filterMenuKey as keyof FilterMenuResponseType];
 
-      <button type="button" onClick={() => onSubmit(filtersArray)}>
+            return Object.keys(filterSubMenu).map((subMenuKey) => {
+              filtersObject[filterMenuKey as keyof FilterMenuResponseType][subMenuKey] = [];
+              const filterArray = filtersObject[filterMenuKey as keyof FilterMenuResponseType][subMenuKey];
+              const items = filterSubMenu[subMenuKey as keyof FilterMenuItemType];
+
+              if (filterMenuKey === 'range') {
+                return (
+                  <FilterRangeItem
+                    key={subMenuKey}
+                    filterArray={filterArray}
+                    items={items}
+                  />
+                );
+              }
+
+              return (
+                <FilterStatusItem
+                  key={subMenuKey}
+                  filterArray={filterArray}
+                  items={items}
+                />
+              );
+            });
+          })}
+      <button className={styles.button} type="button" onClick={() => onSubmit(filtersObject)}>
         Ara
       </button>
     </div>
+
   );
 };
 

@@ -2,41 +2,210 @@
   {
     "id": 0,
     "name": "Luna Icon Amazon Kamuflaj Jean Pantolon",
-    "price": 100,
-    "color": "black",
-    "gender": "female",
-    "cloth": "linen",
-    "size":"l",
-    "cut":"slimfit"
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/hf0/h7c/9390163034142/101245-32256_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 100,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "l",
+      "sizeLabel": "L",
+      "cut": "slimfit",
+      "cutLabel": "Dar Kesim",
+      "year": 2019
+    }
   },
   {
     "id": 1,
     "name": "Joy Kemer Detaylı Mavi Jean Pantolon",
-    "price": 200,
-    "color": "red",
-    "gender": "female",
-    "cloth": "linen",
-    "size":"xl",
-    "cut":"slimfit"
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/hd8/hcb/9356063408158",
+    "properties": {
+      "price": 200,
+      "colors": "red",
+      "colorLabel": "Kırmızı",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "xl",
+      "sizeLabel": "XL",
+      "cut": "slimfit",
+      "cutLabel": "Dar Kesim",
+      "year": 2020
+    }
   },
   {
     "id": 2,
     "name": "Mykonos Yırtıklı Gold Jean Pantolon",
-    "price": 75,
-    "color": "black",
-    "gender": "female",
-    "cloth": "cotton",
-    "size":"xxl",
-    "cut":"slimfit"
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h8b/h45/9363953582110/100976-29199_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 75,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "xxl",
+      "sizeLabel": "XXL",
+      "cut": "slimfit",
+      "cutLabel": "Dar Kesim",
+      "year": 2015
+    }
   },
   {
     "id": 3,
     "name": "ZİFTT Serisi James Jean Pantolon",
-    "price": 100,
-    "color": "gray",
-    "gender": "male",
-    "cloth": "cotton",
-    "size":"xxl",
-    "cut":"loose"
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h27/hb5/9394594643998/0042421319_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 100,
+      "colors": "gray",
+      "colorLabel": "Gri",
+      "gender": "male",
+      "genderLabel": "Erkek",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "xxl",
+      "sizeLabel": "XXL",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
+  },
+  {
+    "id": 4,
+    "name": "TOKK Serisi James 90s Jean Pantolon",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h3e/h28/9394632556574/0042431958_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 250,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "male",
+      "genderLabel": "Erkek",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "xl",
+      "sizeLabel": "XL",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2020
+    }
+  },
+  {
+    "id": 5,
+    "name": "ZİFTT Serisi James Siyahı Jean Pantolon",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h97/h77/9394596610078/0042431036_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "gray",
+      "colorLabel": "Gri",
+      "gender": "male",
+      "genderLabel": "Erkek",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "l",
+      "sizeLabel": "L",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2019
+    }
+  },
+  {
+    "id": 6,
+    "name": "Beli Büzgülü Siyah Crop Bluz",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
+  },
+  {
+    "id": 7,
+    "name": "Beli Büzgülü Siyah Crop Bluz",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
+  },
+  {
+    "id": 8,
+    "name": "Beli Büzgülü Siyah Crop Bluz",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
+  },
+  {
+    "id": 9,
+    "name": "Beli Büzgülü Siyah Crop Bluz",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
+  },
+  {
+    "id": 10,
+    "name": "Beli Büzgülü Siyah Crop Bluz",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "black",
+      "colorLabel": "Siyah",
+      "gender": "female",
+      "genderLabel": "Kadın",
+      "cloth": "linen",
+      "clothLabel": "Keten",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "year": 2017
+    }
   }
 ]

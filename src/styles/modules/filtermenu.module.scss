@@ -3,28 +3,23 @@
 @import "../variables/fonts";
 @import "../variables/misc";
 
-.filterMenuContainer {
-  border: 1px solid $midGray;
-  border-radius: 8px;
-}
-
 .filterMenuWrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding: 16px 0;
+  grid-template-columns: auto auto;
   margin-top: $smallMarginGutter;
   row-gap: $gridGap;
+  border: 1px solid $midGray;
+  border-radius: 8px;
+  @media screen and (max-width: 920px) {
+    grid-template-columns: auto;
+  }
 }
 
-.filterItemWrapper {
-  display: grid;
-  row-gap: 5px;
-}
-
-.input {
-  width: 120px;
-  border-radius: 6px;
-  outline: none;
-  border: 1px solid $lightBorderColor;
+.button {
+  border: 1px solid $midGray;
+  font-size: 18px;
   height: 30px;
-  padding: 0 5px;
+  width: 140px;
+  align-self: flex-end;
 }

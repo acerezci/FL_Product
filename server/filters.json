@@ -47,8 +47,15 @@
     "price": {
       "label": "Fiyat Aralığı",
       "items": [
-        { "id": 0, "label": "En Düşük Fiyat", "value": "min" },
-        { "id": 1, "label": "En Yüksek Fiyat", "value": "max" }
+        { "id": 0, "label": "min TL", "value": "min" },
+        { "id": 1, "label": "max TL", "value": "max" }
+      ]
+    },
+    "year":{
+      "label": "Yıl",
+      "items":[
+        { "id": 0, "label": "min Yıl", "value": "min" },
+        { "id": 1, "label": "max Yıl", "value": "max" }
       ]
     }
   }

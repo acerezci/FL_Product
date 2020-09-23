@@ -21,38 +21,36 @@ app.get('/allfilters', (_req, res) => {
 
 app.post('/filterdata', (req, res) => {
   let filteredData = data;
-  const {
-    cloth, colors, cut, sizes, gender, price,
-  } = req.body;
+  const { range, status } = req.body;
 
-  if (cloth.length > 0) {
-    filteredData = data.filter((item) => cloth.find((findItem) => findItem === item.cloth));
+  if (status) {
+    Object.keys(status).forEach((filterKey) => {
+      const statusFilterArray = status[filterKey];
+      if (statusFilterArray.length > 0) {
+        filteredData = filteredData.filter((item) => statusFilterArray.find(
+          (findItem) => item.properties[filterKey] === findItem,
+        ));
+      }
+    });
   }
 
-  if (colors.length > 0) {
-    filteredData = filteredData.filter((item) => colors.find((findItem) => findItem === item.color));
-  }
-
-  if (cut.length > 0) {
-    filteredData = filteredData.filter((item) => cut.find((findItem) => findItem === item.cut));
-  }
-
-  if (sizes.length > 0) {
-    filteredData = filteredData.filter((item) => sizes.find((findItem) => findItem === item.size));
-  }
-
-  if (gender.length > 0) {
-    filteredData = filteredData.filter((item) => gender.find((findItem) => findItem === item.gender));
-  }
-
-  if (price.min || price.max) {
-    let { min, max } = price;
-    if (max === '') max = 99999999;
-    if (min === '') min = 0;
-    filteredData = filteredData.filter(
-      (item) => item.price >= parseInt(min, 10)
-        && item.price <= parseInt(max, 10),
-    );
+  if (range) {
+    Object.keys(range).forEach((filterKey) => {
+      const rangeFilterAray = range[filterKey];
+      if (
+        rangeFilterAray.length > 0
+        && (rangeFilterAray[0] !== '' || rangeFilterAray[1] !== '')
+      ) {
+        let min = rangeFilterAray[0];
+        let max = rangeFilterAray[1];
+        if (!min) min = 0;
+        if (!max) max = 99999999;
+        filteredData = filteredData.filter(
+          (item) => item.properties[filterKey] >= parseInt(min, 10)
+            && item.properties[filterKey] <= parseInt(max, 10),
+        );
+      }
+    });
   }
 
   res.jsonp(filteredData);
