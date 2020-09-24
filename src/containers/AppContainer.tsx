@@ -5,7 +5,6 @@ import FilterMenu from '../components/FilterMenu';
 import ProductsContainer from './ProductsContainer';
 import '../styles/app.global.scss';
 import styles from '../styles/modules/app.module.scss';
-import { ProductResponseType } from '../types/responses';
 
 const AppContainer: React.FC = () => {
   const [products, setProducts] = useState<ProductResponseType>();
@@ -13,7 +12,7 @@ const AppContainer: React.FC = () => {
   const [error, setError] = useState(false);
 
   useEffect(() => {
-    fetch('http://localhost:8080/alldata')
+    fetch('http://localhost:8080/')
       .then((response) => response.json())
       .then((response) => setProducts(response.data))
       .then(() => {
@@ -37,11 +36,31 @@ const AppContainer: React.FC = () => {
     <div className={appClasses}>
       <Header />
       <section className={mainSectionWrapper}>
-        <FilterMenu />
+        <FilterMenu setError={setError} setLoading={setLoading} setProducts={setProducts} />
         <ProductsContainer error={error} loading={loading} products={products} />
       </section>
     </div>
   );
 };
+
+export type ProductResponseType = Array<{
+  id: number;
+  name: string;
+  image: string;
+  properties: {
+    cloth: string;
+    clothLabel: string;
+    color: string;
+    colorLabel: string;
+    cut: string;
+    cutLabel: string;
+    gender: string;
+    genderLabel: string;
+    size: string;
+    sizeLabel: string;
+    price: number;
+    year: number;
+  };
+}>;
 
 export default AppContainer;

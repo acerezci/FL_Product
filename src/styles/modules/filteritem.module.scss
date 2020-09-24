@@ -1,26 +1,29 @@
-@import "../variables/colors";
-@import "../variables/grid";
-@import "../variables/fonts";
-@import "../variables/misc";
+@import '../variables/colors';
+@import '../variables/grid';
+@import '../variables/fonts';
+@import '../variables/misc';
 
 .filterItemWrapper {
-  display: grid;
-  border-bottom:1px solid $midGray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 10px;
 }
 
-.filterItemWrapper:last-child{
-  border-bottom:none;
+.filterItemWrapperTitle {
+  font-weight: 600;
 }
 
-.filterItemWrapper:nth-last-child(2){
-  border-bottom:none;
+.innerWrapper {
+  display: flex;
 }
 
 .input {
-  width: 140px;
+  border: 1px solid #dedede;
   border-radius: 6px;
-  outline: none;
-  border: 1px solid $lightBorderColor;
+  margin: 5px 0;
   height: 30px;
-  padding: 0 5px;
+  padding: 5px 10px;
+  outline: none;
+  width: 75px;
 }

@@ -1,0 +1,25 @@
+.basketItemWrapper {
+  display: flex;
+  flex-direction: row;
+  border-bottom: 1px solid #cecece;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  div {
+    font-size: 14px;
+    line-height: 18px;
+    margin-left: 5px;
+  }
+}
+
+.image {
+  width: 50%;
+  height: auto;
+  border-radius: 6px;
+}
+
+.cancelImage {
+  width: 6%;
+  position: absolute;
+  left: 0;
+  cursor: pointer;
+}

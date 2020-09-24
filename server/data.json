@@ -134,78 +134,59 @@
   },
   {
     "id": 7,
-    "name": "Beli Büzgülü Siyah Crop Bluz",
-    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "name": "Reflektörlü Crop Ceket",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/hc4/h2d/9386281533470",
     "properties": {
-      "price": 150,
-      "colors": "black",
-      "colorLabel": "Siyah",
+      "price": 230,
+      "colors": "gray",
+      "colorLabel": "Gri",
       "gender": "female",
       "genderLabel": "Kadın",
-      "cloth": "linen",
-      "clothLabel": "Keten",
-      "sizes": "s",
-      "sizeLabel": "S",
-      "cut": "loose",
-      "cutLabel": "Bol Kesim",
+      "cloth": "velvet",
+      "clothLabel": "Kadife",
+      "sizes": "l",
+      "sizeLabel": "L",
+      "cut": "slimfit",
+      "cutLabel": "Dar Kesim",
       "year": 2017
     }
   },
   {
     "id": 8,
-    "name": "Beli Büzgülü Siyah Crop Bluz",
-    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "name": "Siyah Tişört",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h6a/hef/9364019183646",
     "properties": {
-      "price": 150,
+      "price": 50,
       "colors": "black",
       "colorLabel": "Siyah",
-      "gender": "female",
-      "genderLabel": "Kadın",
-      "cloth": "linen",
-      "clothLabel": "Keten",
-      "sizes": "s",
-      "sizeLabel": "S",
+      "gender": "male",
+      "genderLabel": "Erkek",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "xxl",
+      "sizeLabel": "XXL",
       "cut": "loose",
       "cutLabel": "Bol Kesim",
-      "year": 2017
+      "year": 2020
     }
   },
   {
     "id": 9,
-    "name": "Beli Büzgülü Siyah Crop Bluz",
-    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
+    "name": "Suni Deri Siyah Jogger Pantolon",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h5d/h94/9386280615966",
     "properties": {
       "price": 150,
       "colors": "black",
       "colorLabel": "Siyah",
       "gender": "female",
       "genderLabel": "Kadın",
-      "cloth": "linen",
-      "clothLabel": "Keten",
+      "cloth": "leather",
+      "clothLabel": "Deri",
       "sizes": "s",
       "sizeLabel": "S",
       "cut": "loose",
       "cutLabel": "Bol Kesim",
-      "year": 2017
-    }
-  },
-  {
-    "id": 10,
-    "name": "Beli Büzgülü Siyah Crop Bluz",
-    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/h76/he6/9388675432478/122660-900_image_1.jpg_Default-ZoomProductImage",
-    "properties": {
-      "price": 150,
-      "colors": "black",
-      "colorLabel": "Siyah",
-      "gender": "female",
-      "genderLabel": "Kadın",
-      "cloth": "linen",
-      "clothLabel": "Keten",
-      "sizes": "s",
-      "sizeLabel": "S",
-      "cut": "loose",
-      "cutLabel": "Bol Kesim",
-      "year": 2017
+      "year": 2020
     }
   }
 ]

@@ -1,25 +1,22 @@
-@import "../variables/colors";
-@import "../variables/grid";
-@import "../variables/fonts";
-@import "../variables/misc";
+@import '../variables/colors';
+@import '../variables/grid';
+@import '../variables/fonts';
+@import '../variables/misc';
 
 .filterMenuWrapper {
-  display: grid;
   padding: 16px 0;
-  grid-template-columns: auto auto;
-  margin-top: $smallMarginGutter;
-  row-gap: $gridGap;
   border: 1px solid $midGray;
   border-radius: 8px;
-  @media screen and (max-width: 920px) {
-    grid-template-columns: auto;
-  }
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .button {
   border: 1px solid $midGray;
-  font-size: 18px;
-  height: 30px;
-  width: 140px;
-  align-self: flex-end;
+  border-radius: 6px;
+  font-size: 21px;
+  height: 45px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 36px 0;
 }

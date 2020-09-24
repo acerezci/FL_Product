@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const data = require('./data.json');
-const filters = require('./filters.json');
+const filters = require('./filters');
 
 const app = express();
 
@@ -11,17 +11,19 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-app.get('/alldata', (_req, res) => {
+app.get('/', (_req, res) => {
   res.jsonp({ data });
 });
 
-app.get('/allfilters', (_req, res) => {
+app.get('/filters', (_req, res) => {
   res.jsonp({ filters });
 });
 
-app.post('/filterdata', (req, res) => {
-  let filteredData = data;
+app.post('/filter', (req, res) => {
+  let filteredData = [...data];
   const { range, status } = req.body;
+
+  console.log(req.body);
 
   if (status) {
     Object.keys(status).forEach((filterKey) => {

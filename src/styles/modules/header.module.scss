@@ -1,7 +1,7 @@
-@import "../variables/colors";
-@import "../variables/grid";
-@import "../common/grid";
-@import "../variables/misc";
+@import '../variables/colors';
+@import '../variables/grid';
+@import '../common/grid';
+@import '../variables/misc';
 @import '../variables/fonts';
 
 .header {
@@ -19,8 +19,7 @@
   margin-right: $marginGutter / 2;
 }
 
-.basketImage{
-  cursor: pointer;
+.basketImage {
   height: 35px;
   margin-right: $marginGutter / 2;
 }
@@ -30,4 +29,40 @@
   display: grid;
   column-gap: $gridGap;
   grid-template-columns: auto auto;
+}
+
+.basketWrapper {
+  cursor: pointer;
+  position: relative;
+}
+
+.length {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -10px;
+  right: -5px;
+  background-color: #fff;
+  color: $black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  font-size: 0.9em;
+}
+
+.basketContainer {
+  position: absolute;
+  right: 85px;
+  top: 60px;
+  width: 300px;
+  height: 50%;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  border-radius: 6px;
+  padding: 6px;
+  z-index: 1;
+  overflow: hidden;
+  overflow-y: auto;
 }
