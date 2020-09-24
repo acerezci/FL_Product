@@ -188,5 +188,26 @@
       "cutLabel": "Bol Kesim",
       "year": 2020
     }
+  },
+  {
+    "id": 10,
+    "name": "Bisiklet Yaka Bej Tişört",
+    "image": "https://sky-static.mavi.com/sys-master/maviTrImages/hb0/h10/9377612595230/062377-27307_image_1.jpg_Default-ZoomProductImage",
+    "properties": {
+      "price": 150,
+      "colors": "yellow",
+      "colorLabel": "Sarı",
+      "gender": "male",
+      "genderLabel": "Erkek",
+      "cloth": "cotton",
+      "clothLabel": "Pamuk",
+      "sizes": "s",
+      "sizeLabel": "S",
+      "cut": "loose",
+      "cutLabel": "Bol Kesim",
+      "collar": "straightCollar",
+      "collarLabel": "Düz Yaka",
+      "year": 2020
+    }
   }
 ]

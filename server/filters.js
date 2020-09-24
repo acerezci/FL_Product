@@ -42,6 +42,13 @@ module.exports = {
         loose: { label: 'Bol Kesim', value: 'loose' },
       },
     },
+    collar: {
+      label: 'Yaka Tipi',
+      items: {
+        straightCollar: { label: 'Düz Yaka', value: 'straightCollar' },
+        roundCollar: { label: 'Yuvarlak Yaka', value: 'roundCollar' },
+      },
+    },
   },
   range: {
     price: {
