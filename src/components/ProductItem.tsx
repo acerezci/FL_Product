@@ -2,6 +2,7 @@ import React from 'react';
 import styles from '../styles/modules/products.module.scss';
 import { useAppDispatch } from '../store';
 import { BasketActions } from '../store/basket/reducers';
+import plus from '../assets/plus.svg';
 
 const ProductItem: React.FC<ProductItemType> = (props) => {
   const dispatch = useAppDispatch();
@@ -17,6 +18,9 @@ const ProductItem: React.FC<ProductItemType> = (props) => {
       </div>
       <div className={styles.innerWrapper}>
         <div className={styles.priceWrapper}>{props.price} ₺</div>
+        <div className={styles.plusImageWrapper}>
+          <img aria-hidden onClick={addBasket} className={styles.plusImage} src={plus} alt="plus" />
+        </div>
         <h3 className={styles.title}>{props.name}</h3>
         <div className={styles.propertyWrapper}>
           <div>{`Kumaş Türü: ${props.clothLabel}`}</div>
@@ -27,9 +31,6 @@ const ProductItem: React.FC<ProductItemType> = (props) => {
           <div>{`Yıl: ${props.year}`}</div>
           <div>{`Fiyat: ${props.price} TL`}</div>
         </div>
-        <button type="button" onClick={addBasket}>
-          Sepete Ekle
-        </button>
       </div>
     </div>
   );

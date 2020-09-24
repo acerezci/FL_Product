@@ -9,7 +9,6 @@ const BasketItem: React.FC<ProductItemType> = (props) => {
   const dispatch = useAppDispatch();
   const removeItem = () => {
     const { id } = props;
-    // console.log(id);
     dispatch(BasketActions.removeBasketData(id));
   };
 
