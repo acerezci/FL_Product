@@ -6,7 +6,6 @@ import { useAppDispatch } from "../store";
 import { BasketActions } from "../store/basket/reducers";
 
 const BasketItem: React.FC<ProductItemType> = (props) => {
-  console.log(props);
   const dispatch = useAppDispatch();
   const removeItem = () => {
     const { id } = props;
