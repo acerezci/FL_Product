@@ -1,17 +1,18 @@
-import cx from 'classnames';
-import React from 'react';
-import styles from '../styles/modules/filteritem.module.scss';
+import cx from "classnames";
+import React from "react";
+import styles from "../styles/modules/filteritem.module.scss";
 
 const FilterItem: React.FC<Props> = ({ value, type, onChange }) => {
-  const inputStyle = cx(type === 'range' && styles.input);
+  console.log(value);
+  const inputStyle = cx(type === "range" && styles.input);
   let inputType: string;
 
   switch (type) {
-    case 'status':
-      inputType = 'checkbox';
+    case "status":
+      inputType = "checkbox";
       break;
     default:
-      inputType = 'text';
+      inputType = "text";
       break;
   }
 
@@ -25,9 +26,9 @@ const FilterItem: React.FC<Props> = ({ value, type, onChange }) => {
             type={inputType}
             onChange={onChange(valueKey)}
             placeholder={item.label}
-            value={item.inputValue || ''}
+            value={item.inputValue || ""}
           />
-          {type !== 'range' && <div>{item.label}</div>}
+          {type !== "range" && <div>{item.label}</div>}
         </div>
       ))}
     </div>
