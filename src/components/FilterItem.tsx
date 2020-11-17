@@ -3,7 +3,6 @@ import React from "react";
 import styles from "../styles/modules/filteritem.module.scss";
 
 const FilterItem: React.FC<Props> = ({ value, type, onChange }) => {
-  console.log(value);
   const inputStyle = cx(type === "range" && styles.input);
   let inputType: string;
 

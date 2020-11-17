@@ -4,7 +4,6 @@ import FilterItem, { FilterItemValue } from "./FilterItem";
 import styles from "../styles/modules/filtermenu.module.scss";
 
 const FilterItems: React.FC<Props> = ({ type, values, handleChange }) => {
-  console.log(type);
   const filterWrapper = cx("container", styles.filterMenuWrapper);
   const onFilterChange = (key: string) => (valueKey: string) =>
     handleChange(type, key, valueKey);
